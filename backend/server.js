@@ -43,7 +43,7 @@ app.use('/api/assignments', require('./routes/assignmentRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));
 
 // Deployment support (for serving React build in production)
-const clientBuildPath = path.join(__dirname, '../client/build');
+const clientBuildPath = path.join(__dirname, '../frontend/build');
 if (fs.existsSync(clientBuildPath)) {
   app.use(express.static(clientBuildPath));
 
